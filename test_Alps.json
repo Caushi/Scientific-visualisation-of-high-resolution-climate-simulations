@@ -1,0 +1,37 @@
+{
+  "outputPath": "./pics",
+  "plotting_interval": "00:01:00",
+  "enable_plotting": {
+    "TQI": true,
+    "TQC": true,
+    "W_SNOW": true,
+    "TOT_PREC": true,
+    "W_SO": true,
+    "LPI": true,
+    "DHAIL_MX": true,
+    "TQV": false
+  },
+  "const_path": "/Users/claudio/Downloads/atmosthesis/lffd20210522000000c.nc",
+  "paths": {
+    "TQI": "/Users/claudio/Downloads/atmosthesis/lightning",
+    "TQC": "/Users/claudio/Downloads/atmosthesis/lightning",
+    "W_SNOW": "/Users/claudio/Downloads/atmosthesis",
+    "TOT_PREC": "/Users/claudio/Downloads/atmosthesis/hail",
+    "W_SO": "/Users/claudio/Downloads/atmosthesis",
+    "DHAIL_MX": "/Users/claudio/Downloads/atmosthesis/hail",
+    "LPI": "/Users/claudio/Downloads/atmosthesis/lightning",
+    "TQV": null
+  },
+  "data_time_stepping": {
+    "TQV": null,
+    "TQI": "01:00:00",
+    "TQC": "01:00:00",
+    "W_SNOW": "1 day, 00:00:00",
+    "TOT_PREC": "00:5:00",
+    "W_SO": "1 day, 00:00:00",
+    "DHAIL_MX": "00:5:00",
+    "LPI": "01:00:00"
+  },
+  "vis_duration": "00:05:00",
+  "vis_start_date": "2021-06-21 00:00:00"
+}

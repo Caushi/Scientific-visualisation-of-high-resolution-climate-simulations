@@ -1,0 +1,22 @@
+{
+  "outputPath" : "./pics",
+  "paths": {
+    "const": "/Users/claudio/Downloads/atmosthesis/lffd20210522000000c.nc",
+    "TQV": null,
+    "TQI": null,
+    "TQC": null,
+    "TOT_SNOW": null,
+    "TOT_PREC": null,
+    "W_SO": "/Users/claudio/Downloads/atmosthesis"
+  },
+  "data_time_stepping": {
+    "TQV": null,
+    "TQI": null,
+    "TQC": null,
+    "TOT_SNOW": null,
+    "TOT_PREC": null,
+    "W_SO": "1 day, 00:00:00"
+  },
+  "vis_duration": "1 day",
+  "anim_start_date": "2021-05-25 00:00:00"
+}
