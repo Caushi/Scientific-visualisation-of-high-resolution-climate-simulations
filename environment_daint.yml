@@ -1,4 +1,4 @@
-name: base
+name: Scientific-visualisation
 channels:
   - defaults
 dependencies:
@@ -124,4 +124,3 @@ dependencies:
   - yaml=0.2.5
   - zlib=1.2.12
   - zstd=1.5.2
-prefix: /users/ccannizz/miniconda3
