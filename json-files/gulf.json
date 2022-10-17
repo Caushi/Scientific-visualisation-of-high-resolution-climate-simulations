@@ -1,0 +1,37 @@
+{
+  "vis_duration": "20 days",
+  "vis_start_date": "2015-07-04 00:00:00",
+  "plotting_interval": "00:30:00",
+  "outputPath": "/scratch/snx3000/ccannizz/17.10/picGulf",
+  "enable_plotting": {
+    "TQI": true,
+    "TQC": true,
+    "W_SNOW": false,
+    "TOT_PREC": true,
+    "W_SO": true,
+    "LPI": false,
+    "DHAIL_MX": false,
+    "TQV": false
+  },
+  "const_path": "/project/pr133/heimc/data/cosmo_out/gulf/lffd20150701000000c.nc",
+  "paths": {
+    "TQI": "/project/pr133/heimc/data/cosmo_out/gulf/lm_f/30min_water/2015",
+    "TQC": "/project/pr133/heimc/data/cosmo_out/gulf/lm_f/30min_water/2015",
+    "W_SNOW": null,
+    "TOT_PREC": "/project/pr133/heimc/data/cosmo_out/gulf/lm_f/30min_water/2015",
+    "W_SO": "/project/pr133/heimc/data/cosmo_out/gulf/lm_f/24h/2015",
+    "LPI": null,
+    "DHAIL_MX": null,
+    "TQV": null
+  },
+  "data_time_stepping": {
+    "TQI": "0:30:0",
+    "TQC": "0:30:0",
+    "W_SNOW": null,
+    "TOT_PREC": "0:30:0",
+    "W_SO": "1 day, 00:00:00",
+    "LPI": null,
+    "DHAIL_MX": null,
+    "TQV": null
+  }
+}

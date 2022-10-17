@@ -32,7 +32,7 @@ class VisParam:
         'DHAIL_MX': (0, 1000)
     }
 
-    draw_grid_lines = True
+    draw_grid_lines = False
     grid_labelsize = 15
     time_font_size = 13
 
