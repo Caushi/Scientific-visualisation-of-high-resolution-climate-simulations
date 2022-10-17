@@ -1,4 +1,4 @@
-name: Scientific-visualisation
+name: scivis
 channels:
   - defaults
 dependencies:
