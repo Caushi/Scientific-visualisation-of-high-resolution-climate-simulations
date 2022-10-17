@@ -18,7 +18,7 @@
     "TQI": "/scratch/snx3000/velasque/cosmo6_23Jan2006/4_lm_f/output/1h_2D",
     "TQC": "/scratch/snx3000/velasque/cosmo6_23Jan2006/4_lm_f/output/1h_2D",
     "W_SNOW": "/scratch/snx3000/velasque/cosmo6_23Jan2006/4_lm_f/output/24h",
-    "TOT_PREC": "/scratch/snx3000/velasque/cosmo6_23Jan2006/4_lm_f/output/5min_2D","/project/pr133/heimc/data/cosmo_out/SA_3_ctrl/lm_c/30min_water/2006",
+    "TOT_PREC": "/scratch/snx3000/velasque/cosmo6_23Jan2006/4_lm_f/output/5min_2D",
     "W_SO": "/scratch/snx3000/velasque/cosmo6_23Jan2006/4_lm_f/output/24h",
     "LPI": "/scratch/snx3000/velasque/cosmo6_23Jan2006/4_lm_f/output/15min_2D",
     "DHAIL_MX": "/scratch/snx3000/velasque/cosmo6_23Jan2006/4_lm_f/output/5min_2D",
