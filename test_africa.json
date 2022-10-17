@@ -1,0 +1,33 @@
+{
+  "outputPath": "./pics",
+  "const_path": "/Users/claudio/Documents/AtmosProject/local_data/africa/lffd20060801000000c.nc",
+  "plotting_interval": "01:00:00",
+  "paths": {
+    "TQV": null,
+    "TQI": null,
+    "TQC": null,
+    "TOT_SNOW": null,
+    "TOT_PREC": null,
+    "W_SO": "/Users/claudio/Documents/AtmosProject/local_data/africa"
+  },
+  "enable_plotting": {
+    "TQI": false,
+    "TQC": false,
+    "W_SNOW": false,
+    "TOT_PREC": false,
+    "W_SO": true,
+    "LPI": false,
+    "DHAIL_MX": false,
+    "TQV": false
+  },
+  "data_time_stepping": {
+    "TQV": null,
+    "TQI": null,
+    "TQC": null,
+    "TOT_SNOW": null,
+    "TOT_PREC": null,
+    "W_SO": "1 day, 00:00:00"
+  },
+  "vis_duration": "1 day, 00:00:00",
+  "vis_start_date": "2006-08-23 00:00:00"
+}

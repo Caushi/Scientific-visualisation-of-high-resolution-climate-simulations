@@ -4,22 +4,25 @@
   "plotting_interval": "00:01:00",
   "outputPath": "./pics",
   "enable_plotting": {
-    "TQV": false,
     "TQI": false,
     "TQC": false,
     "W_SNOW": false,
     "TOT_PREC": true,
     "W_SO": false,
-    "LPI": false
+    "LPI": true,
+    "DHAIL_MX": true,
+    "TQV": false
   },
+  "const_path": "/project/pr133/ccannizz/lm_c/lffd20060801000000c.nc",
   "paths": {
-    "const": "/project/pr133/ccannizz/lm_c/lffd20060801000000c.nc",
     "TQV": "/project/pr133/ccannizz/lm_c/1h_2D/2006",
     "TQI": "/project/pr133/ccannizz/lm_c/1h_2D/2006",
     "TQC": "/project/pr133/ccannizz/lm_c/30min_water/2006",
     "W_SNOW": null,
     "TOT_PREC": "/project/pr133/ccannizz/lm_c/30min_water/2006",
-    "W_SO": "/project/pr133/ccannizz/lm_c/24h/2006"
+    "W_SO": "/project/pr133/ccannizz/lm_c/24h/2006",
+    "LPI": null,
+    "DHAIL_MX": null
   },
   "data_time_stepping": {
     "TQV": "1:0:0",
@@ -28,6 +31,7 @@
     "TOT_SNOW": null,
     "TOT_PREC": "0:30:0",
     "W_SO": "1 day, 00:00:00",
-    "LPI": "00:15:00"
+    "LPI": null,
+    "DHAIL_MX": null
   }
 }

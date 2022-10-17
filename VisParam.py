@@ -24,7 +24,7 @@ class VisParam:
         'TQC': (0, 0.25),
         'TQV': (0, 50),
         'TQI': (0, 0.2),
-        'TOT_PREC': (0, 5),
+        'TOT_PREC': (0, 50),
         'W_SNOW': (0.001, 0.01),
         'elev': (0, 6000),
         'ice': (0.9, 1),
@@ -32,11 +32,11 @@ class VisParam:
         'DHAIL_MX': (0, 1000)
     }
 
-    draw_grid_lines = False
+    draw_grid_lines = True
     grid_labelsize = 15
     time_font_size = 13
 
-    dpi = 'figure'  # dpi of the picture 'figure' is the dpi of the figure itself, but can be changed to any number
+    dpi = 'figure'  # dpi of the picture: 'figure' is the dpi of the figure itself, but can be changed to any number
     use_native_resolution = True  # automatically set picture sizes to data size
     # if use_native_resolution == False use this:
     figsize = (3840 / 100, 2160 / 100)

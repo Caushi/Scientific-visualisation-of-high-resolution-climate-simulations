@@ -1,6 +1,6 @@
 {
   "outputPath": "./pics",
-  "plotting_interval": "00:01:00",
+  "plotting_interval": "01:00:00",
   "enable_plotting": {
     "TQI": true,
     "TQC": true,

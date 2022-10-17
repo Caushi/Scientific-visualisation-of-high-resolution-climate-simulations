@@ -33,7 +33,7 @@ class Visualization:
         # load const params
         (self.fr_land, self.for_e, self.for_d, self.alb_dif, self.grass_mask, self.grass_greenness, self.forest_mask,
          self.forest_greenness, self.elev, self.soiltyp, self.rotated_pole,
-         self.native_resolution) = self.load_const_data(
+         self.native_resolution, self.lat_long_extend) = self.load_const_data(
             self.vp.const_path)
         self.outputFolder = self.vp.outputPath
 
@@ -130,8 +130,10 @@ class Visualization:
     def plot_all(self, current_time, to_plot):
         time_str = self.get_timestring(current_time)
         tic = time.perf_counter()
-        fig = plt.figure(figsize=self.vp.figsize)
-        ax = plt.axes(projection=self.rotated_pole)
+        fig, ax = plt.subplots(figsize=self.vp.figsize, subplot_kw={"projection": self.rotated_pole, "frameon": False})
+        #ax.set_extent(self.lat_long_extend, crs=ccrs.PlateCarree())
+        # ax.set_global()
+
         if self.vp.draw_grid_lines:
             gl = ax.gridlines(crs=ccrs.PlateCarree(), draw_labels=True,
                               linewidth=2, color='gray', alpha=0.5, linestyle='--', x_inline=False,
@@ -171,7 +173,7 @@ class Visualization:
         # clear the title and plot time at the top write corner
         ax.set_title('')
         ax.set_title('{:%d.%m.%Y %H:00}'.format(current_time), loc='right',
-                     zorder=2, pad=-31, fontsize=self.vp.time_font_size,
+                     fontsize=self.vp.time_font_size,
                      bbox={'facecolor': 'white', 'alpha': 0.7, 'pad': 1})
 
         picpath = self.outputFolder + "/" + time_str + ".jpg"
@@ -207,10 +209,20 @@ class Visualization:
             for_d = ds.FOR_D.load()
             alb_dif = ds.ALB_DIF.load()
             rot_pole = ds.rotated_pole.load()
-
+            lat = ds.lat.load()
+            lon = ds.lon.load()
         # get rotated pole
         rotated_pole = ccrs.RotatedPole(pole_longitude=rot_pole.grid_north_pole_longitude,
                                         pole_latitude=rot_pole.grid_north_pole_latitude)
+
+        # trying to make white box around plot smaller / unssuccesful so far
+        min_lat = min([lat.data[0, 0], lat.data[0, -1]], key=abs)
+        max_lat = min([lat.data[-1, 0], lat.data[-1, -1]], key=abs)
+        min_lon = min([lon.data[0, 0], lon.data[-1, 0]], key=abs)
+        max_lon = min([lon.data[0, -1], lon.data[-1, -1]], key=abs)
+
+        lat_long_extend = [min_lon, max_lon, min_lat, max_lat]
+        #print(lat_long_extend)
 
         px = 1. / 100.  # pixel in inches
         native_resolution = (for_e.sizes.get('rlon') * px, for_e.sizes.get('rlat') * px)
@@ -230,7 +242,7 @@ class Visualization:
         forest_mask = for_e + for_d
         forest_greenness = forest_mask * (1 - alb_dif)
 
-        return fr_land, for_e, for_d, alb_dif, grass_mask, grass_greenness, forest_mask, forest_greenness, elev, ice, rotated_pole, native_resolution
+        return fr_land, for_e, for_d, alb_dif, grass_mask, grass_greenness, forest_mask, forest_greenness, elev, ice, rotated_pole, native_resolution, lat_long_extend
 
     @staticmethod
     def load_variable(var_name, path):
