@@ -1,7 +1,7 @@
 {
   "vis_duration": "20 days",
   "anim_start_date": "2006-08-23 00:00:00",
-  "plotting_interval": "00:01:00",
+  "plotting_time_step": "00:01:00",
   "outputPath": "./pics",
   "enable_plotting": {
     "TQI": false,

@@ -1,7 +1,7 @@
 {
   "vis_duration": "20 days",
   "vis_start_date": "2006-01-20 00:00:00",
-  "plotting_interval": "00:30:00",
+  "plotting_time_step": "00:30:00",
   "outputPath": "/scratch/snx3000/ccannizz/17.10/picEuropeWinter",
   "enable_plotting": {
     "TQI": true,

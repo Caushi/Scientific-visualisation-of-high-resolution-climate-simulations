@@ -49,7 +49,7 @@ class Visualization:
         current_time = self.vp.vis_start_date
         print(f"Start time: {current_time}")
         to_plot = {key: None for key, value in data_read_intervals.items()}
-        plotting_frequency = parse_duration(self.vp.plotting_interval) / dt
+        plotting_time_step = parse_duration(self.vp.plotting_time_step) / dt
 
         skip = False
 
@@ -78,7 +78,7 @@ class Visualization:
                         # if it's not plotting time
                         # concatenate multiple data reads together ( used for hail, lightning and precipitation)
                         # skip to next timestep
-                        if plotting_frequency > data_read_intervals[i] and t % plotting_frequency != 0:
+                        if plotting_time_step > data_read_intervals[i] and t % plotting_time_step != 0:
                             to_plot[i] = xr.concat([to_plot[i], self.load_variable(i, path)], dim='time')
                             skip = True
                             continue

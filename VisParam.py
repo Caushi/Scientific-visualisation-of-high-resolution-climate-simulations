@@ -470,4 +470,4 @@ class VisParam:
         self.vis_start_date = datetime.fromisoformat(data["vis_start_date"])
         self.outputPath = data["outputPath"]
         self.enable_plotting = data["enable_plotting"]
-        self.plotting_interval = data["plotting_interval"]
+        self.plotting_time_step = data["plotting_time_step"]
